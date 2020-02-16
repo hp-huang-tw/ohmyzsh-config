@@ -102,6 +102,10 @@ if [ -f ~/.zshrc_aliases ]; then
   source ~/.zshrc_aliases
 fi
 
+if [ -f ~/.zshrc_aliases_work ]; then
+  source ~/.zshrc_aliases_work
+fi
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
