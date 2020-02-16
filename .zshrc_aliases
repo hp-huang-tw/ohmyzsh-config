@@ -1,0 +1,16 @@
+## network
+alias pinggg="ping google.com"
+
+## git
+alias gadog="git log --all --decorate --oneline --graph #gadog"
+alias galog="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(r) —— %C(bold blue)%an%C(r): %C(white)%s%C(r) %C(dim white) %C(bold green)(%ar)%C(r) %C(bold yellow)%d%C(r)' --all"
+
+## git emoji and jira
+gcmsgf () {
+  if [ $2 ]; then
+    git commit -m ":sparkles: [$2] $1."
+  else
+    git commit -m ":sparkles: $1."
+  fi
+}
+
