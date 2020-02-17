@@ -6,11 +6,23 @@ alias gadog="git log --all --decorate --oneline --graph #gadog"
 alias galog="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(r) —— %C(bold blue)%an%C(r): %C(white)%s%C(r) %C(dim white) %C(bold green)(%ar)%C(r) %C(bold yellow)%d%C(r)' --all"
 
 ## git emoji and jira
-gcmsgf () {
+gcmsg_feature () {
   if [ $2 ]; then
     git commit -m ":sparkles: [$2] $1."
   else
     git commit -m ":sparkles: $1."
+  fi
+}
+
+gcmsg_ok () {
+  git commit -m ":ok_hand: apply reivew."
+}
+
+gcmsg_pass_test () {
+  if [ $1 ]; then
+    git commit -m ":heavy_check_mark: [$1] make testing passed."
+  else
+    git commit -m ":heavy_check_mark: make testing passed."
   fi
 }
 
