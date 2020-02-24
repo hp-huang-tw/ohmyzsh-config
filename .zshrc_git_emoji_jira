@@ -34,3 +34,12 @@ gcmsg_refactor () {
     git commit -m ":recycle: $1."
   fi
 }
+
+gcmsg_improve_code () {
+   if [ $2 ]; then
+    git commit -m ":art: [$2] $1."
+  else
+    git commit -m ":art: $1."
+  fi
+}
+
