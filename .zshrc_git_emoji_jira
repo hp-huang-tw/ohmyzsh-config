@@ -43,3 +43,6 @@ gcmsg_improve_code () {
   fi
 }
 
+gcmsg_typo () {
+ git commit -m ":pencil2: fix typo."
+}
