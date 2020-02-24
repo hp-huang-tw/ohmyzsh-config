@@ -1,0 +1,36 @@
+## git emoji and jira
+gcmsg_feature () {
+  if [ $2 ]; then
+    git commit -m ":sparkles: [$2] $1."
+  else
+    git commit -m ":sparkles: $1."
+  fi
+}
+
+gcmsg_ok () {
+  git commit -m ":ok_hand: apply reivew."
+}
+
+gcmsg_add_test () {
+  if [ $1 ]; then
+    git commit -m ":white_check_mark: [$1] add testing."
+  else
+    git commit -m ":white_check_mark: add testing."
+  fi
+}
+
+gcmsg_pass_test () {
+  if [ $1 ]; then
+    git commit -m ":heavy_check_mark: [$1] make testing passed."
+  else
+    git commit -m ":heavy_check_mark: make testing passed."
+  fi
+}
+
+gcmsg_refactor () {
+  if [ $2 ]; then
+    git commit -m ":recycle: [$2] $1."
+  else
+    git commit -m ":recycle: $1."
+  fi
+}

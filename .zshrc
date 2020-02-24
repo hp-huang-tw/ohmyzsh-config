@@ -102,11 +102,24 @@ if [ -f ~/.zshrc_aliases ]; then
   source ~/.zshrc_aliases
 fi
 
+source ~/.bash_profile
+
 if [ -f ~/.zshrc_aliases_work ]; then
   source ~/.zshrc_aliases_work
+fi
+
+if [ -f ~/.zshrc_git_emoji_jira ]; then
+  source ~/.zshrc_git_emoji_jira
 fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# marker
+[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
