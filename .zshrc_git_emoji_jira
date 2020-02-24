@@ -8,7 +8,7 @@ gcmsg_feature () {
 }
 
 gcmsg_ok () {
-  git commit -m ":ok_hand: apply reivew."
+  git commit -m ":ok_hand: apply review."
 }
 
 gcmsg_add_test () {
