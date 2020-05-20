@@ -36,7 +36,7 @@ gcmsg_refactor () {
 }
 
 gcmsg_improve_code () {
-   if [ $2 ]; then
+  if [ $2 ]; then
     git commit -m ":art: [$2] $1."
   else
     git commit -m ":art: $1."
@@ -44,5 +44,13 @@ gcmsg_improve_code () {
 }
 
 gcmsg_typo () {
- git commit -m ":pencil2: fix typo."
+  git commit -m ":pencil2: fix typo."
+}
+
+gcmsg_bug () {
+  if [ $2 ]; then
+    git commit -m ":bug: [$2] $1."
+  else
+    git commit -m ":bug: $1."
+  fi
 }
